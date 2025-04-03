@@ -53,7 +53,6 @@ end
 
 -- Function to populate a buffer with ASCII art and suggestions
 function M.populate(buf)
-	local config = require("project-guide.config")
 	local ascii = require("project-guide.ascii")
 	local suggestions = require("project-guide.suggestions")
 
