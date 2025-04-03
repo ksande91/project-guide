@@ -63,8 +63,8 @@ function M.populate(buf)
 	-- Get ASCII art
 	local content = ascii.get_prepared_art()
 
-	-- Add suggestions if enabled
-	if config.options.suggestions and config.options.suggestions.enabled then
+	-- Add suggestions
+	do
 		local suggestion_content = suggestions.get_formatted_suggestions()
 
 		-- Get window width to calculate centering

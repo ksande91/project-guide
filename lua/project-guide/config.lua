@@ -3,9 +3,6 @@ local M = {}
 -- Default configuration
 M.defaults = {
   auto_open = false, -- Whether to open project guide buffer on VimEnter
-  suggestions = {
-    enabled = true, -- Whether to show suggested next steps
-  },
   explanations = {
     markdown = true,          -- Whether to format explanations as markdown
     syntax_highlighting = true, -- Whether to enable syntax highlighting for markdown

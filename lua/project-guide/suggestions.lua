@@ -3,28 +3,6 @@ local config = require("project-guide.config")
 
 -- Function to get suggestions based on configuration
 function M.get_suggestions()
-  -- Check if suggestions are enabled
-  if not config.options.suggestions.enabled then
-    return {
-      "",
-      "--- Suggestions are disabled ---",
-      "",
-      "To enable AI-powered suggestions, add the following to your config:",
-      "",
-      "require('project-guide').setup({",
-      "  suggestions = {",
-      "    enabled = true,",
-      "  },",
-      "  anthropic = {",
-      "    -- Choose one of these options:",
-      "    api_key = 'your_anthropic_api_key',  -- For API access",
-      "    -- OR --",
-      "    use_claude_cli = true,  -- To use the Claude CLI",
-      "  }",
-      "})",
-      "",
-    }
-  end
 
   -- Execute in protected mode to ensure settings are restored
   local ok, result = pcall(function()
