@@ -14,7 +14,7 @@ Using [packer.nvim](https://github.com/wbthomason/packer.nvim):
 
 ```lua
 use {
-  'your-username/project-guide',
+  'ksande91/project-guide',
   requires = { 'nvim-lua/plenary.nvim' }
 }
 ```
@@ -23,7 +23,7 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-  'your-username/project-guide',
+  'ksande91/project-guide',
   dependencies = { 'nvim-lua/plenary.nvim' }
 }
 ```
@@ -36,11 +36,6 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 require('project-guide').setup({
   -- Auto-open the project guide when Neovim starts
   auto_open = false,
-
-  -- Suggestion configuration
-  suggestions = {
-    enabled = true,
-  },
 
   -- Claude configuration
   anthropic = {
