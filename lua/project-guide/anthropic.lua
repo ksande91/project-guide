@@ -68,14 +68,6 @@ function M.generate_suggestions()
   Here is the context of the current project:
   ]] .. project_context
 
-  local log_file_path = vim.fn.stdpath("cache") .. "/project-guide-prompt.log"
-  local log_file = io.open(log_file_path, "w")
-  if log_file then
-    log_file:write(prompt)
-    log_file:close()
-    vim.notify("Prompt logged to: " .. log_file_path, vim.log.levels.INFO)
-  end
-
   -- Make the API request
   local response = curl.post("https://api.anthropic.com/v1/messages", {
     headers = {
