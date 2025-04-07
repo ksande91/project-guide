@@ -50,6 +50,8 @@ function M.generate_suggestions()
     return M.generate_suggestions_with_claude_cli()
   end
 
+  vim.notify("Fetching suggestions", vim.log.levels.DEBUG)
+
   -- Prepare the prompt for Claude based on project type
   local prompt = [[
   You are helping a developer who is working on a project. Based on the context of their current project,
@@ -132,6 +134,8 @@ function M.generate_suggestions()
     end
     suggestions = limited
   end
+
+  vim.notify("Suggestions fetched", vim.log.levels.DEBUG)
 
   return suggestions
 end
@@ -612,4 +616,3 @@ Your explanation should be well-structured with proper Markdown formatting.]]
 end
 
 return M
-

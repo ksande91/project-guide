@@ -8,11 +8,9 @@ local function main()
 
 	-- Create or reuse buffer
 	if existing_buf then
-		vim.notify("Buffer exists", vim.log.levels.DEBUG)
 		-- Just display the existing buffer
 		buffer.display(existing_buf)
 	else
-		vim.notify("Buffer does not exists", vim.log.levels.DEBUG)
 		-- Create a new buffer if one doesn't exist
 		local buf = buffer.create()
 		buffer.populate(buf)
